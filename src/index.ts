@@ -1,5 +1,6 @@
 // import customer from './ts/task-1'
 import { Storage } from './ts/task-2'
+import StringBuilder from './ts/task-3'
 
 // customer.setDiscount(0.15)
 // console.log(customer.getDiscount()) // 0.15
@@ -18,3 +19,12 @@ console.log(storage.getItems()) // ["Nanitoids", "Antigravitator", "Droid"]
 
 storage.removeItem('Scaner')
 console.log(storage.getItems()) // ["Nanitoids", "Antigravitator", "Droid"]
+
+const builder = new StringBuilder('.')
+console.log(builder.getValue()) // "."
+builder.padStart('^')
+console.log(builder.getValue()) // "^."
+builder.padEnd('^')
+console.log(builder.getValue()) // "^.^"
+builder.padBoth('=')
+console.log(builder.getValue()) // "=^.^="
